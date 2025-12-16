@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+.pnpm-store
+
+# build
+dist
+build
+*.tsbuildinfo
+
+# env
+.env
+.env.*
+
+# misc
+.DS_Store
+.idea
+.vscode

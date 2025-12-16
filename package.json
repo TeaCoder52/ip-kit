@@ -1,0 +1,21 @@
+{
+	"name": "ip-kit",
+	"private": true,
+	"version": "0.0.0",
+	"description": "Security-first toolkit for resolving real client IPs",
+	"license": "MIT",
+	"author": "",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TeaCoder52/ip-kit"
+	},
+	"packageManager": "pnpm@9.0.0",
+	"scripts": {
+		"build": "pnpm -r build",
+		"lint": "pnpm -r lint",
+		"test": "pnpm -r test"
+	},
+	"devDependencies": {
+		"typescript": "^5.4.0"
+	}
+}

@@ -1,0 +1,53 @@
+{
+	"name": "@ip-kit/express",
+	"version": "1.0.0",
+	"description": "Express adapter for ip-kit",
+	"keywords": [
+		"ip",
+		"express",
+		"proxy",
+		"forwarded",
+		"x-forwarded-for",
+		"cloudflare",
+		"security",
+		"middleware"
+	],
+	"license": "MIT",
+	"author": "ip-kit",
+	"homepage": "https://github.com/TeaCoder52/ip-kit",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TeaCoder52/ip-kit.git",
+		"directory": "packages/express"
+	},
+	"bugs": {
+		"url": "https://github.com/TeaCoder52/ip-kit/issues"
+	},
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"test": "vitest run"
+	},
+	"dependencies": {
+		"@ip-kit/core": "workspace:*"
+	},
+	"peerDependencies": {
+		"express": ">=4"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.21",
+		"vitest": "^4.0.0",
+		"typescript": "^5.0.0"
+	}
+}
