@@ -1,6 +1,6 @@
-import type { ExtractResult } from '@ip-kit/core'
+import type { ClientIpResult } from '@ip-kit/core'
 
-export interface IpKitRequestContext extends ExtractResult {}
+export interface IpKitRequestContext extends ClientIpResult {}
 
 declare global {
 	namespace Express {
