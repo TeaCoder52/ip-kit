@@ -1,6 +1,6 @@
 {
 	"name": "@ip-kit/core",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Core logic for resolving real client IP addresses",
 	"license": "MIT",
 	"type": "module",
