@@ -3,12 +3,11 @@ name: Release
 on:
     push:
         branches:
-          - main
-        paths:
-          - '.changeset/**'
-    push:
+            - main
         tags:
-          - 'v*.*.*'
+            - 'v*.*.*'
+        paths:
+            - '.changeset/**'
     workflow_dispatch:
 
 permissions:
