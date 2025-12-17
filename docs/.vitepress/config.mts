@@ -3,6 +3,21 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
 	title: 'ip-kit',
 	description: 'Security-first IP resolution for Node.js',
+	lang: 'en-US',
+	sitemap: {
+		hostname: 'https://teacoder52.github.io/ip-kit',
+	},
+	head: [
+		['meta', { name: 'theme-color', content: '#0ea5e9' }],
+		['meta', { property: 'og:title', content: 'ip-kit' }],
+		[
+			'meta',
+			{
+				property: 'og:description',
+				content: 'Security-first IP resolution for Node.js',
+			},
+		],
+	],
 
 	locales: {
 		root: {
@@ -31,6 +46,16 @@ export default defineConfig({
 							],
 						},
 					],
+				},
+				socialLinks: [
+					{
+						icon: 'github',
+						link: 'https://github.com/TeaCoder52/ip-kit',
+					},
+				],
+				footer: {
+					message: 'Выпущено под лицензией MIT.',
+					copyright: '© 2025 TeaCoder',
 				},
 			},
 		},
@@ -66,6 +91,16 @@ export default defineConfig({
 							],
 						},
 					],
+				},
+				socialLinks: [
+					{
+						icon: 'github',
+						link: 'https://github.com/TeaCoder52/ip-kit',
+					},
+				],
+				footer: {
+					message: 'Released under the MIT License.',
+					copyright: '© 2025 TeaCoder',
 				},
 			},
 		},
