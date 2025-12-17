@@ -12,6 +12,9 @@
 		"security",
 		"middleware"
 	],
+	"publishConfig": {
+		"access": "public"
+	},
 	"license": "MIT",
 	"author": "ip-kit",
 	"homepage": "https://github.com/TeaCoder52/ip-kit",

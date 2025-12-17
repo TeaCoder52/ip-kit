@@ -4,6 +4,9 @@
 	"description": "Core logic for resolving real client IP addresses",
 	"license": "MIT",
 	"type": "module",
+	"publishConfig": {
+		"access": "public"
+	},
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
