@@ -4,10 +4,13 @@ import { createCidrMatcher } from './cidr-matcher'
 export const trustPresets = {
 	loopback: {
 		mode: 'fn',
+		name: 'LOOPBACK',
 		fn: (ip) => ip === '127.0.0.1' || ip === '::1',
 	},
+
 	private: {
 		mode: 'fn',
+		name: 'PRIVATE_NETWORK',
 		fn: createCidrMatcher([
 			'10.0.0.0/8',
 			'172.16.0.0/12',
@@ -15,11 +18,15 @@ export const trustPresets = {
 			'127.0.0.0/8',
 			'::1/128',
 			'fc00::/7',
+			'fe80::/10',
 		]),
 	},
+
 	cloudflare: {
 		mode: 'fn',
+		name: 'CLOUDFLARE',
 		fn: createCidrMatcher([
+			// IPv4
 			'173.245.48.0/20',
 			'103.21.244.0/22',
 			'103.22.200.0/22',
@@ -35,6 +42,8 @@ export const trustPresets = {
 			'104.24.0.0/14',
 			'172.64.0.0/13',
 			'131.0.72.0/22',
+
+			// IPv6
 			'2400:cb00::/32',
 			'2606:4700::/32',
 			'2803:f800::/32',
