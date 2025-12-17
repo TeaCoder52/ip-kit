@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'vitest'
-import { ipKitExpress } from './middleware'
+import { ipKit } from './middleware'
 
-describe('ipKitExpress', () => {
+describe('ipKit', () => {
 	it('returns a middleware function', () => {
-		const mw = ipKitExpress()
+		const mw = ipKit()
 		expect(typeof mw).toBe('function')
 	})
 })
