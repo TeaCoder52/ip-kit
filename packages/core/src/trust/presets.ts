@@ -7,7 +7,6 @@ export const trustPresets = {
 		name: 'LOOPBACK',
 		fn: (ip) => ip === '127.0.0.1' || ip === '::1',
 	},
-
 	private: {
 		mode: 'fn',
 		name: 'PRIVATE_NETWORK',
@@ -21,7 +20,6 @@ export const trustPresets = {
 			'fe80::/10',
 		]),
 	},
-
 	cloudflare: {
 		mode: 'fn',
 		name: 'CLOUDFLARE',

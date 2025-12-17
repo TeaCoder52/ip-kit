@@ -10,8 +10,8 @@ export interface IpKitExpressOptions {
 	trustProxy?: TrustProxyConfig | keyof typeof trustPresets
 }
 
-export function ipKitExpress(options: IpKitExpressOptions = {}) {
-	const trust =
+export function ipKit(options: IpKitExpressOptions = {}) {
+	const proxy =
 		typeof options.trustProxy === 'string'
 			? createTrustProxy(trustPresets[options.trustProxy])
 			: options.trustProxy
@@ -23,9 +23,9 @@ export function ipKitExpress(options: IpKitExpressOptions = {}) {
 		_res: Response,
 		next: NextFunction
 	) {
-		const result = extractIp(req, { trustProxy: trust })
-
-		req.ipKit = result
+		req.ipKit = extractIp(req, {
+			trustProxy: proxy.fn,
+		})
 
 		next()
 	}
