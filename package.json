@@ -14,10 +14,14 @@
 		"build": "pnpm -r build",
 		"lint": "pnpm -r lint",
 		"test": "pnpm -r test",
+		"docs:dev": "vitepress dev docs",
+		"docs:build": "vitepress build docs",
+		"docs:preview": "vitepress preview docs",
 		"release": "changeset publish"
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.29.8",
-		"typescript": "^5.4.0"
+		"typescript": "^5.4.0",
+		"vitepress": "^1.6.4"
 	}
 }
